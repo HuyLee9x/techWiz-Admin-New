@@ -1,0 +1,35 @@
+[
+  {
+    "Id": 1,
+    "Name": "Cây Cảnh Xanh",
+    "DeleteAt": null,
+    "UpdatedBy": "Người Cập Nhật 1",
+    "UpdatedAt": "2023-08-10T10:00:00Z",
+    "isDeleted": false,
+    "CreatedAt": "2023-08-01T08:30:00Z",
+    "CreatedBy": "Người Tạo 1",
+    "DeleteBy": null
+  },
+  {
+    "Id": 2,
+    "Name": "Cây Cảnh Đỏ",
+    "DeleteAt": null,
+    "UpdatedBy": "Người Cập Nhật 2",
+    "UpdatedAt": "2023-08-09T14:20:00Z",
+    "isDeleted": false,
+    "CreatedAt": "2023-07-25T11:45:00Z",
+    "CreatedBy": "Người Tạo 2",
+    "DeleteBy": null
+  },
+  {
+    "Id": 3,
+    "Name": "Cây Cảnh Vàng",
+    "DeleteAt": null,
+    "UpdatedBy": "Người Cập Nhật 3",
+    "UpdatedAt": "2023-08-07T16:15:00Z",
+    "isDeleted": false,
+    "CreatedAt": "2023-07-18T09:10:00Z",
+    "CreatedBy": "Người Tạo 3",
+    "DeleteBy": null
+  }
+]

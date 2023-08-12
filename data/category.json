@@ -1,0 +1,39 @@
+[
+    {
+      "Id": 1,
+      "Name": "Indoor Plants",
+      "Type": "Decor",
+      "DeleteAt": null,
+      "UpdatedBy": null,
+      "UpdatedAt": null,
+      "isDeleted": false,
+      "CreatedAt": "2023-08-09T14:00:00",
+      "CreatedBy": "admin",
+      "DeleteBy": null
+    },
+    {
+      "Id": 2,
+      "Name": "Outdoor Plants",
+      "Type": "Decor",
+      "DeleteAt": null,
+      "UpdatedBy": null,
+      "UpdatedAt": null,
+      "isDeleted": false,
+      "CreatedAt": "2023-08-09T14:30:00",
+      "CreatedBy": "admin",
+      "DeleteBy": null
+    },
+    {
+      "Id": 3,
+      "Name": "Cacti and Succulents",
+      "Type": "Decor",
+      "DeleteAt": null,
+      "UpdatedBy": null,
+      "UpdatedAt": null,
+      "isDeleted": false,
+      "CreatedAt": "2023-08-09T15:15:00",
+      "CreatedBy": "admin",
+      "DeleteBy": null
+    }
+  ]
+  
