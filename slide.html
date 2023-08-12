@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NewsCategories</title>
+  <title>Slide</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -171,13 +171,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">News Categories</h1>
+              <h1 class="m-0">News</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="layout.html">Home</a></li>
-                <li class="breadcrumb-item active">Categories</li>
-                <li class="breadcrumb-item active">News Categories</li>
+                <li class="breadcrumb-item active">Slide</li>
               </ol>
             </div>
           </div>
@@ -190,25 +189,24 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <button class="btn btn-default" id="addProductButton" data-toggle="modal" data-target="#editModal">Add
-                    News Categories</button>
+                  <button class="btn btn-default" id="addProductButton" data-toggle="modal" data-target="#editModal">Add Slide</button>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive p-0" style="height: 350px;">
                   <table style="width: 1000px;" class="table table-bordered display" id="myTable" datatable="" dt-options="dtOptions">
                     <thead>
                       <tr>
-                        <th>ID</th>
-                        <th>Tittle</th>
-                        <th>Type</th>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Image</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr ng-repeat="d in data">
                         <td>{{d.id}}</td>
-                        <td>{{d.name}}</td>
-                        <td>{{d.type}}</td>
+                        <td>{{d.slide_code}}</td>
+                        <td>{{d.slide_value}}</td>
                         <td>
                           <div class="btn-group">
                             <button ng-click="onDelete(d.id)" type="button" class="btn btn-info">
@@ -246,11 +244,11 @@
           </div>
           <div class="modal-body">
             <!-- Các trường để người dùng chỉnh sửa -->
-            <label>Tittle</label>
-            <input ng-model="currentProductCategory.name" type="text" class="form-control" placeholder="Tittle">
+            <label>Name</label>
+            <input ng-model="currentProductCategory.name" type="text" class="form-control" placeholder="Name">
             <label>Type</label>
             <select id="category" name="category" ng-model="currentProductCategory.type" type="text" class="form-control">
-              <option value="Plans">Plans</option>
+              <option value="Plants">Plants</option>
               <option value="Decoration">Decoration</option>
               <option value="Accessory">Accessory</option>
             </select>
@@ -312,7 +310,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
     integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="javascript/newscategory.js"></script>
+  <script src="javascript/Slide.js"></script>
 </body>
 
 </html>

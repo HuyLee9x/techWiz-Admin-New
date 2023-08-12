@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ProductCategories</title>
+  <title>News</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -120,6 +120,22 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="news.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  News
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Slide.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Slide
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>
@@ -142,14 +158,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-tree"></i>
-                <p>
-                  My Profile
-                </p>
-              </a>
-            </li>
+            
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -162,13 +171,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Product Categories</h1>
+              <h1 class="m-0">News</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="layout.html">Home</a></li>
-                <li class="breadcrumb-item active">Categories</li>
-                <li class="breadcrumb-item active">Product Categories</li>
+                <li class="breadcrumb-item active">News</li>
               </ol>
             </div>
           </div>
@@ -181,17 +189,17 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <button class="btn btn-default" id="addProductButton" data-toggle="modal" data-target="#editModal">Add
-                    New Product Categories</button>
+                  <button class="btn btn-default" id="addProductButton" data-toggle="modal" data-target="#editModal">Add News</button>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive p-0" style="height: 350px;">
                   <table style="width: 1000px;" class="table table-bordered display" id="myTable" datatable="" dt-options="dtOptions">
                     <thead>
                       <tr>
-                        <th>ID</th>
+                        <th>Id</th>
                         <th>Name</th>
-                        <th>Type</th>
+                        <th>Image</th>
+                        <th>Description</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -199,7 +207,8 @@
                       <tr ng-repeat="d in data">
                         <td>{{d.id}}</td>
                         <td>{{d.name}}</td>
-                        <td>{{d.type}}</td>
+                        <td>{{d.image}}</td>
+                        <td>{{d.description}}</td>
                         <td>
                           <div class="btn-group">
                             <button ng-click="onDelete(d.id)" type="button" class="btn btn-info">
@@ -208,6 +217,10 @@
                             <button ng-click="onEdit(d)" data-toggle="modal" data-target="#editModal" type="button"
                               class="btn btn-info">
                               Edit
+                            </button>
+                            <button ng-click="" data-toggle="modal" data-target="#editModal" type="button"
+                              class="btn btn-info">
+                              Content
                             </button>
                           </div>
                         </td>
@@ -241,7 +254,7 @@
             <input ng-model="currentProductCategory.name" type="text" class="form-control" placeholder="Name">
             <label>Type</label>
             <select id="category" name="category" ng-model="currentProductCategory.type" type="text" class="form-control">
-              <option value="Plans">Plans</option>
+              <option value="Plants">Plants</option>
               <option value="Decoration">Decoration</option>
               <option value="Accessory">Accessory</option>
             </select>
@@ -303,7 +316,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
     integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="javascript/category.js"></script>
+  <script src="javascript/News.js"></script>
 </body>
 
 </html>

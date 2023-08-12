@@ -156,6 +156,22 @@
               </a>
             </li>
             <li class="nav-item">
+              <a href="news.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  News
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Slide.html" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Slide
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>
@@ -212,51 +228,247 @@
       <!-- /.content-header -->
       <!-- Main content -->
       <section class="content">
-        <!-- /.card-header -->
-        <section class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body" style="height: 300px;">
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>Id</th>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Password</th>
-                          <th>Address</th>
-                          <th>Role</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr ng-repeat="d in data">
-                          <td>{{d.Id}}</td>
-                          <td>{{d.Name}}</td>
-                          <td>{{d.Email}}</td>
-                          <td>{{d.Password}}</td>
-                          <td>{{d.Address}}</td>
-                          <td>{{d.Role}}</td>
-                          <td>
-                            <div class="btn-group">
-                              <button data-toggle="modal" data-target="#editModal" type="button" class="btn btn-info">
-                                Edit
-                              </button>
-                              <button data-toggle="modal" data-target="#viewProductModal" type="button"
-                                class="btn btn-info">
-                                Details
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+  
+              <!-- Profile Image -->
+              <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                  <div class="text-center">
+                    <img class="profile-user-img img-fluid img-circle"
+                         src="../../dist/img/user3-128x128.jpg"
+                         alt="User profile picture">
                   </div>
-                </div><!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
+  
+                  <h3 class="profile-username text-center">Nina Mcintire</h3>
+  
+                  <p class="text-muted text-center">Admin</p>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+  
+              <!-- About Me Box -->
+              
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+              <div class="card">
+                <div class="card-header p-2">
+                  <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">View</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a></li>
+                  </ul>
+                </div><!-- /.card-header -->
+                
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="active tab-pane" id="activity">
+                      <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Full Name : </label>
+                        <div class="col-sm-10">
+                          <span   id="inputName2"></span>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputName2" class="col-sm-2 col-form-label">User Name : </label>
+                        <div class="col-sm-10">
+                          <span   id="inputName2"></span>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputName2" class="col-sm-2 col-form-label">Email : </label>
+                        <div class="col-sm-10">
+                          <span   id="inputName2"></span>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputName2" class="col-sm-2 col-form-label">Phone Number : </label>
+                        <div class="col-sm-10">
+                          <span   id="inputName2"></span>
+                        </div>
+                      </div>
+                      <!-- Post -->
+                      
+                      <!-- /.post -->
+  
+                      <!-- Post -->
+                      
+                      <!-- /.post -->
+  
+                      <!-- Post -->
+                      
+                      <!-- /.post -->
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="timeline">
+                      <!-- The timeline -->
+                      <div class="timeline timeline-inverse">
+                        <!-- timeline time label -->
+                        <div class="time-label">
+                          <span class="bg-danger">
+                            10 Feb. 2014
+                          </span>
+                        </div>
+                        <!-- /.timeline-label -->
+                        <!-- timeline item -->
+                        <div>
+                          <i class="fas fa-envelope bg-primary"></i>
+  
+                          <div class="timeline-item">
+                            <span class="time"><i class="far fa-clock"></i> 12:05</span>
+  
+                            <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
+  
+                            <div class="timeline-body">
+                              Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
+                              weebly ning heekya handango imeem plugg dopplr jibjab, movity
+                              jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
+                              quora plaxo ideeli hulu weebly balihoo...
+                            </div>
+                            <div class="timeline-footer">
+                              <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                              <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- END timeline item -->
+                        <!-- timeline item -->
+                        <div>
+                          <i class="fas fa-user bg-info"></i>
+  
+                          <div class="timeline-item">
+                            <span class="time"><i class="far fa-clock"></i> 5 mins ago</span>
+  
+                            <h3 class="timeline-header border-0"><a href="#">Sarah Young</a> accepted your friend request
+                            </h3>
+                          </div>
+                        </div>
+                        <!-- END timeline item -->
+                        <!-- timeline item -->
+                        <div>
+                          <i class="fas fa-comments bg-warning"></i>
+  
+                          <div class="timeline-item">
+                            <span class="time"><i class="far fa-clock"></i> 27 mins ago</span>
+  
+                            <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+  
+                            <div class="timeline-body">
+                              Take me to your leader!
+                              Switzerland is small and neutral!
+                              We are more like Germany, ambitious and misunderstood!
+                            </div>
+                            <div class="timeline-footer">
+                              <a href="#" class="btn btn-warning btn-flat btn-sm">View comment</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- END timeline item -->
+                        <!-- timeline time label -->
+                        <div class="time-label">
+                          <span class="bg-success">
+                            3 Jan. 2014
+                          </span>
+                        </div>
+                        <!-- /.timeline-label -->
+                        <!-- timeline item -->
+                        <div>
+                          <i class="fas fa-camera bg-purple"></i>
+  
+                          <div class="timeline-item">
+                            <span class="time"><i class="far fa-clock"></i> 2 days ago</span>
+  
+                            <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+  
+                            <div class="timeline-body">
+                              <img src="https://placehold.it/150x100" alt="...">
+                              <img src="https://placehold.it/150x100" alt="...">
+                              <img src="https://placehold.it/150x100" alt="...">
+                              <img src="https://placehold.it/150x100" alt="...">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- END timeline item -->
+                        <div>
+                          <i class="far fa-clock bg-gray"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.tab-pane -->
+  
+                    <div class="tab-pane" id="settings">
+                      <form class="form-horizontal">
+                        
+                        <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">New Password</label>
+                          <div class="col-sm-10">
+                              <input type="password" class="form-control" id="inputPassword" placeholder="New Password">
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Confirm</label>
+                          <div class="col-sm-10">
+                              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm New Password">
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                          <div class="offset-sm-2 col-sm-10">
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" id="showPasswordCheckbox"> Show Password
+                                  </label>
+                              </div>
+                          </div>
+                      </div>
+                        <!-- <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">New Password</label>
+                          <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="New Password">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Confirm</label>
+                          <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Confirm New Password">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="offset-sm-2 col-sm-10">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> Hide
+                              </label>
+                            </div> -->
+                          <!-- </div> -->
+                        <!-- </div> -->
+                        <div class="form-group row">
+                          <label for="inputExperience" class="col-sm-2 col-form-label">Avatar</label>
+                          <div class="col-sm-10">
+                            <input type="file" class="form-control" id="inputPassword" placeholder="Confirm Password">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- /.tab-pane -->
+                  </div>
+                  <!-- /.tab-content -->
+                </div><!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </section>
     </div>
 
     </section>
@@ -348,6 +560,21 @@
     </div>
   </div>
   </div>
+  <script>
+    const showPasswordCheckbox = document.getElementById("showPasswordCheckbox");
+    const newPasswordField = document.getElementById("inputPassword");
+    const confirmPasswordField = document.getElementById("confirmPassword");
+
+    showPasswordCheckbox.addEventListener("change", function() {
+        if (showPasswordCheckbox.checked) {
+            newPasswordField.type = "text";
+            confirmPasswordField.type = "text";
+        } else {
+            newPasswordField.type = "password";
+            confirmPasswordField.type = "password";
+        }
+    });
+</script>
 </body>
 
 </html>
