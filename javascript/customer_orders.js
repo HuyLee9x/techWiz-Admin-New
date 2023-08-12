@@ -2,7 +2,7 @@ var app = angular.module('app', []);
 app.controller('controller', function ($scope, $http, $timeout) {
     $scope.data = [];
     $scope.getData = function () {
-        $http.get('https://btbk.hndedu.com/api/Order').then(function (response) {
+        $http.get('https://btbk.hndedu.com/api/Order/GetAll').then(function (response) {
             $scope.data = response.data.dataRows;
             $timeout(()=>{
                 $('#myTable').DataTable();
@@ -20,7 +20,7 @@ app.controller('controller', function ($scope, $http, $timeout) {
     $scope.onDelete = function (id) {
         var checker = window.confirm('ARE YOU SURE TO DELETE?');
         if (checker) {
-            $http.delete('https://btbk.hndedu.com/api/Order?id=' + id).then(function (response) {
+            $http.delete('https://btbk.hndedu.com/api/Order/Delete?id=' + id).then(function (response) {
                 alert('DELETE SUCCESS!');
                 $scope.getData();
             })
@@ -31,7 +31,7 @@ app.controller('controller', function ($scope, $http, $timeout) {
         var checker = window.confirm('ARE YOU SURE TO UPDATE?');
         console.log(JSON.stringify(d))
         if (checker) {
-            $http.put('https://btbk.hndedu.com/api/Order',d).then(function (response) {
+            $http.put('https://btbk.hndedu.com/api/Order/Update',d).then(function (response) {
                 alert('SUCCESS!');
                 $scope.getData();
             })

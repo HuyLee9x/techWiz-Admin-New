@@ -188,8 +188,9 @@
           <div class="row">
             <div class="col-12">
               <div class="card">
-                <div class="card-header">
-                  <button class="btn btn-default" id="addProductButton" data-toggle="modal" data-target="#editModal">Add News</button>
+                <div class="col-md-3">
+                  <button class="btn btn-success" data-toggle="modal" data-target="#editModal11" type="button">Create
+                    New</button>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive p-0" style="height: 350px;">
@@ -317,6 +318,75 @@
     integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="javascript/News.js"></script>
+
+  
+  <div class="modal fade" id="editModal11">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Header modal -->
+        <div class="modal-header">
+          <h4 class="modal-title">Edit Product Information</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Nội dung modal -->
+        <div class="modal-body">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">New Product Information</h3>
+            </div>
+
+
+            <div>
+              <div class="card-body" ng-model="currentProduct">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name of Product</label>
+                  <input type="text" class="form-control" id="nameProduct" placeholder="Enter email"
+                    ng-model="currentProduct.name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Price</label>
+                  <input type="number" class="form-control" id="priceProduct" placeholder="Password"
+                    ng-model="currentProduct.price">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Quantity</label>
+                  <input type="number" class="form-control" id="quantityProduct" placeholder="Password"
+                    ng-model="currentProduct.quantity">
+                </div>
+                <div class="form-group upload-image-group">
+                  <label>Upload Avatar</label>
+                  <input type="file" class="form-control" ngf-select="upload($file)" accept="image/*" >
+                  <img src="{{currentProduct.image}}" style="max-width: 200px;">
+                </div>
+                <!-- <div class="form-group">
+                  <label for="exampleInputPassword1">Avatar</label>
+                  <input type="text" class="form-control" id="" placeholder=""
+                    ng-model="currentProduct.image">
+                </div> -->
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Description</label>
+                  <textarea name="content" ng-model="currentProduct.description" simple-mde></textarea>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary"
+                  ng-click="onSave(currentProduct)">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

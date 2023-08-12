@@ -2,7 +2,7 @@ var app = angular.module('app', []);
 app.controller('controller', function ($scope, $http, $timeout) {
     $scope.data = [];
     $scope.getData = function () {
-        $http.get('https://btbk.hndedu.com/api/User/GetAllUser').then(function (response) {
+        $http.get('https://btbk.hndedu.com/api/User/GetAllUser/GetAllUser').then(function (response) {
             $scope.data = response.data;
             $timeout(() => {
                 $('#myTable').DataTable();

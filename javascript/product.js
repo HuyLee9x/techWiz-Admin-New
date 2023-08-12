@@ -30,7 +30,7 @@ app.controller('controller', function ($scope, $http, $timeout, Upload) {
     $scope.imgBB_API = "d8087645042101303dfd93ce58f3281c";
     $scope.data = [];
     $scope.getData = function () {
-        $http.get('https://btbk.hndedu.com/api/Product').then(function (response) {
+        $http.get('https://btbk.hndedu.com/api/Product/GetAll').then(function (response) {
             $scope.data = response.data.dataRows;
         })
     }
@@ -47,7 +47,7 @@ app.controller('controller', function ($scope, $http, $timeout, Upload) {
 
     $scope.onSave = function (data) {
         if (data.id > 0) {
-            $http.put('https://btbk.hndedu.com/api/Product', data).then(function (response) {
+            $http.put('https://btbk.hndedu.com/api/Product/Update', data).then(function (response) {
                 alert('Update Success!');
                 $scope.currentProduct = {
                     id: 0,
@@ -66,7 +66,7 @@ app.controller('controller', function ($scope, $http, $timeout, Upload) {
             })
         }
         if (data.id == 0) {
-            $http.post('https://btbk.hndedu.com/api/Product', data).then(function (response) {
+            $http.post('https://btbk.hndedu.com/api/Product/Create', data).then(function (response) {
 
                 alert('Add Success!');
                 $scope.currentProduct = {
@@ -95,7 +95,7 @@ app.controller('controller', function ($scope, $http, $timeout, Upload) {
     $scope.onDelete = function (id) {
         var checker = window.confirm('ARE YOU SURE TO DELETE?');
         if (checker) {
-            $http.delete('https://btbk.hndedu.com/api/Product?id=' + id).then(function (response) {
+            $http.delete('https://btbk.hndedu.com/api/Product/Delete?id=' + id).then(function (response) {
                 alert('DELETE SUCCESS!');
                 $scope.getData();
             })

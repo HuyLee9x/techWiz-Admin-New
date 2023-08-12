@@ -2,7 +2,7 @@ var app = angular.module('app', []);
 app.controller('controller', function ($scope, $http, $timeout) {
     $scope.data = [];
     $scope.getData = function () {
-        $http.get('https://btbk.hndedu.com/api/NewCategory').then(function (response) {
+        $http.get('https://btbk.hndedu.com/api/NewsCategory/GetAll').then(function (response) {
             $scope.data = response.data.dataRows;
             $timeout(()=>{
                 $('#myTable').DataTable();
@@ -18,7 +18,7 @@ app.controller('controller', function ($scope, $http, $timeout) {
     }
 
     $scope.onSave = function (data) {
-        if (data.id > 0){$http.put('https://btbk.hndedu.com/api/NewCategory', data).then(function (response) {
+        if (data.id > 0){$http.put('https://btbk.hndedu.com/api/NewsCategory/Update', data).then(function (response) {
             alert('Update Success!');
             $scope.currentProductCategory = {
                 id: 0,
@@ -28,7 +28,7 @@ app.controller('controller', function ($scope, $http, $timeout) {
             $scope.getData();
         })
     }
-    if (data.id == 0){$http.post('https://btbk.hndedu.com/api/NewCategory', data).then(function (response) {
+    if (data.id == 0){$http.post('https://btbk.hndedu.com/api/NewsCategory/Create', data).then(function (response) {
             alert('Add Success!');
             $scope.currentProductCategory = {
                 id: 0,
@@ -43,7 +43,7 @@ app.controller('controller', function ($scope, $http, $timeout) {
     $scope.onDelete = function (id) {
         var checker = window.confirm('ARE YOU SURE TO DELETE?');
         if (checker) {
-            $http.delete('https://btbk.hndedu.com/api/NewCategory?id=' + id).then(function (response) {
+            $http.delete('https://btbk.hndedu.com/api/NewsCategory/Delete?id=' + id).then(function (response) {
                 alert('DELETE SUCCESS!');
                 $scope.getData();
             })
